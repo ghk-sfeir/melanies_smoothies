@@ -12,7 +12,7 @@ st.write(
 customer_name = st.text_input("Name on Smoothie")
 #st.write("Name entered is", title)
 
-cnx = st.connection("Snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
